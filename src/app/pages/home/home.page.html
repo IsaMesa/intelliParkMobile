@@ -42,4 +42,26 @@
 
   </ion-card>
 
+  <ion-card class="parking-info-card">
+
+    <ion-card-header>
+      <ion-card-title>Información del parqueadero</ion-card-title>
+      <ion-card-subtitle>Horario y datos de contacto</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list lines="full">
+        @for (item of parkingInfo; track item.label) {
+          <ion-item>
+            <ion-label>
+              <h3>{{ item.label }}</h3>
+              <p>{{ item.value }}</p>
+            </ion-label>
+          </ion-item>
+        }
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
 </ion-content>
